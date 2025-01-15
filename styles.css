@@ -1,0 +1,940 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding-top: 60px; /* For fixed header */
+}
+
+/* Header and Navbar Styling */
+header {
+  background: #333;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+header {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+  list-style: none;
+}
+
+.navbar li {
+  margin: 0 1rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #f39c12;
+}
+
+
+/* Section Transition Animation */
+section {
+  opacity: 0; /* Initially invisible */
+  transform: translateY(50px); /* Move down initially */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition */
+}
+
+section.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Move to original position */
+}
+
+
+section {
+  padding: 50px 20px; /* Reduce padding (was likely 100px earlier) */
+  margin-top: 20px; /* Decrease the space above sections */
+}
+
+
+#about-me {
+  position: relative;
+  padding: 0; /* Remove extra padding */
+  margin: 0; /* Remove extra margin */
+  top: -10; /* Ensure it starts right below the menu bar */
+}
+
+section h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+section h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #555;
+  opacity: 0; /* Start with hidden role */
+  transition: opacity 1s ease-in-out; /* Smooth fade transition */
+}
+
+/* Fade-in and Fade-out Keyframes */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+	color: #e74c3c;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+	color: #2ecc71;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+		color: #3498db;
+  }
+}
+
+.role-animate {
+  animation: fadeInOut 2s ease-in-out;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+
+.navbar a.active {
+  color: #f39c12; /* Highlight color for active link */
+  font-weight: bold;
+  border-bottom: 2px solid #f39c12; /* Add a bottom border for emphasis */
+}
+
+
+.about-me-bg {
+  background-image: url('C:/Personal/Personal website/images/cover - Copy.jpg'); /* Path to your image */
+  background-size: cover; /* Ensures the image covers the full width */
+  background-position: center; /* Centers the image */
+  width: 100%; /* Spans full width of the screen */
+  height: 300px; /* Adjust the height as per your preference */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  text-align: left; /* Align text to the left */
+  color: white; /* Text color to contrast the image */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow to the text for readability */
+  opacity: 0.95;
+  padding-left: 120px; /* Add space from the left to move content slightly to the right */
+  padding-top: 50px; /* Shift content downward */
+
+}
+
+
+
+
+}
+
+.about-me-bg h1,
+.about-me-bg h2,
+.about-me-bg h3,
+.about-me-bg p {
+  margin: 0;
+  padding: 5px 0;
+}
+
+/* About Me Cover Image */
+.about-me-cover {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 1; /* Ensure it's fully visible initially */
+    transition: none; /* Remove transition for initial load */
+}
+
+/* Optional Hover Effect (if needed) */
+.about-me-cover:hover {
+    opacity: 0.9; /* Add any hover effect */
+}
+
+
+#download-resume {
+  background: linear-gradient(45deg, #6a1b9a, #00c853, #2196f3, #1de9b6);
+  background-size: 400% 400%;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  animation: gradientMove 3s infinite;
+  margin-top: 20px; /* Move the button down */
+}
+
+#download-resume:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#about-me .icon {
+  position: absolute;
+  left: 64%; /* Move slightly to the right */
+  transform: translateX(-20%); /* Adjust horizontal alignment */
+  top: 3%; /* Vertically center within the section */
+  width: 110px; /* Increase the size of the image */
+  height: 120px; /* Maintain aspect ratio */
+  z-index: 2; /* Ensure it appears above the background */
+  opacity: 0.9; /* Slight transparency */
+}
+
+
+.about-me-container {
+  position: relative; /* Set the container as the reference for positioning */
+}
+
+.about-me-image {
+  position: absolute; /* Position the image absolutely */
+  right: 10%; /* Move the image slightly inward from the right */
+  top: 60%; /* Vertically center the image */
+  transform: translateY(-50%); /* Adjust for perfect centering */
+}
+
+.about-me-image img {
+  max-width: 200px; /* Set a fixed size for the image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+}
+
+
+/* Specific fix for About Me section to remove the space below the header */
+#about-me {
+  margin-top: -20px; /* Remove the gap caused by default margins */
+}
+
+header {
+  margin-bottom: 0; /* Ensure no gap at the bottom of the header */
+}
+
+.template-wrapper {
+  background-image: url("C:/Personal/Personal website/images/Untitled.png");
+  background-size: cover; /* Ensures the image covers the full area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repetition */
+  padding: 20px; /* Adds spacing inside the template */
+}
+
+.image-row {
+  display: flex; /* Align images horizontally */
+  justify-content: space-around; /* Add space between items */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  margin: 20px 0; /* Add spacing above and below the row */
+  padding: 10px;
+}
+
+.image-item {
+  text-align: center; /* Center the text and image */
+  margin: 10px; /* Add spacing around each item */
+  flex: 1; /* Allow flexible sizing */
+  max-width: 180px; /* Limit the width of each item */
+}
+
+.image-item img {
+  width: 100px; /* Set image width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Add space below the image */
+}
+
+.image-item p {
+  font-size: 0.9rem; /* Set font size */
+  line-height: 1.4; /* Improve text readability */
+  color: #333; /* Text color */
+}
+
+.image-row {
+  display: flex; /* Align images horizontally */
+  justify-content: space-around; /* Add space between cards */
+  align-items: flex-start; /* Align items at the top */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  margin: 20px 0; /* Add spacing above and below the row */
+  padding: 10px;
+}
+
+
+
+.card {
+  background-color: #fff; /* Card background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  padding: 20px; /* Add padding inside the card */
+  text-align: center; /* Center the content */
+  max-width: 200px; /* Limit the card width */
+  margin: 10px; /* Add spacing between cards */
+  transition: transform 0.2s ease-in-out; /* Add hover effect */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.card img {
+  width: 80px; /* Set image width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Add space below the image */
+}
+
+.card p {
+  font-size: 0.9rem; /* Set font size */
+  line-height: 1.4; /* Improve readability */
+  color: #333; /* Text color */
+}
+
+
+section {
+  padding: 50px 20px; /* Ensure consistent padding within sections */
+  margin: 0; /* Remove default margins */
+}
+
+.image-row {
+  margin-top: 0; /* Remove top margin from the section with cards */
+}
+
+#about-me {
+  margin-bottom: 0; /* Remove bottom margin from the "About Me" section */
+}
+
+
+/* General Skills Section Styling */
+#skills h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#skills h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+
+
+/* Skills Category Layout */
+.skills-category {
+  display: grid; /* Use a grid layout */
+  grid-template-columns: repeat(6, 1fr); /* 6 items per row */
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center the grid horizontally */
+  align-items: center; /* Center the grid vertically */
+  max-width: 80%; /* Limit the grid width */
+  margin: 0 auto; /* Center the grid */
+  padding: 20px;
+}
+
+/* Skill Card Styling */
+.skill-card {
+  background-color: #fff; /* White background for the card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 10px; /* Adjusted padding inside the card */
+  text-align: center; /* Center the content horizontally */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hover effect */
+  width: 120px; /* Fixed card width */
+  height: 150px; /* Fixed card height */
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack image and text vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+/* Skill Card Images */
+.skill-card img {
+  max-width: 50%; /* Resize images to fit within the card */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 5px; /* Add spacing below the image */
+}
+
+/* Skill Card Text */
+.skill-card .skill-name {
+  font-size: 0.8rem; /* Small font size for skill names */
+  color: #555; /* Gray text color */
+  margin-top: 5px; /* Add some spacing above the text */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+}
+
+/* Hover Effects for Skill Card */
+.skill-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly enhanced shadow on hover */
+}
+
+/* Section Heading Styling */
+.skills-category + h2 {
+  font-size: 1.5rem; /* Smaller font size for subsequent headings */
+  text-align: center; /* Center align */
+  margin-bottom: 15px; /* Adjust spacing */
+  color: #333; /* Consistent color */
+}
+
+
+/* Skills Section Layout */
+.skills-category {
+  display: grid; /* Use a grid layout for organization */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center-align the grid */
+  align-items: center; /* Center-align items vertically */
+  max-width: 80%; /* Limit the width of the grid */
+  margin: 0 auto; /* Center the grid within the page */
+  padding: 20px; /* Add padding around the section */
+}
+
+/* Skill Card Styling */
+.skill-card {
+  background-color: #ffffff; /* White background */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 15px; /* Add padding inside the card */
+  text-align: center; /* Center the content horizontally */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hover effect */
+  width: 150px; /* Set fixed card width */
+  height: 180px; /* Set fixed card height */
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack image and text vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+/* Skill Card Hover Effect */
+.skill-card:hover {
+  transform: translateY(-5px); /* Lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Skill Card Images */
+.skill-card img {
+  width: 60px; /* Set consistent size for images */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Add space below the image */
+}
+
+/* Skill Card Text */
+.skill-card .skill-name {
+  font-size: 1rem; /* Slightly larger text */
+  font-weight: 600; /* Bold text */
+  color: #333; /* Darker text color */
+  margin-top: 5px; /* Add spacing above the text */
+}
+
+/* Section Heading Styling */
+#skills h2 {
+  font-size: 1.8rem; /* Heading font size */
+  font-weight: 700; /* Bold heading */
+  text-align: center; /* Center-align the headings */
+  margin-bottom: 20px; /* Space below each heading */
+  color: #444; /* Consistent color for headings */
+}
+
+/* Align All Sections Consistently */
+#skills h1, #skills h2 {
+  text-align: center; /* Center all headings */
+  margin: 0 auto 20px auto; /* Consistent spacing */
+  color: #333; /* Darker color for visibility */
+}
+
+
+.chatbot-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Align vertically */
+  gap: 15px; /* Space between bot image and input box */
+  margin-top: 20px;
+}
+
+.chatbot-image {
+  width: 50px; /* Set image width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.chatbot-input {
+  width: 60%; /* Make the text box wide */
+  max-width: 600px; /* Limit the maximum width */
+  padding: 15px; /* Add spacing inside the text box */
+  border-radius: 20px; /* Rounded corners */
+  border: 1px solid #ccc; /* Light gray border */
+  font-size: 1rem; /* Adjust font size */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.chatbot-input:focus {
+  border-color: #2196f3; /* Highlight border color on focus */
+  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.2); /* Slight glow effect */
+}
+
+
+
+section {
+  margin: 0; /* Remove gaps between sections */
+  padding: 50px 20px; /* Consistent spacing for each section */
+  border: none; /* Remove any borders */
+  background: transparent; /* Ensure no individual background color/image */
+}
+
+
+
+/* Education Section Styling */
+#education {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.education-card {
+  background-color: #fff; /* White background for the card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  padding: 20px; /* Padding inside the card */
+  text-align: left; /* Align text to the left */
+  max-width: 800px; /* Increased width */
+  margin: 20px auto; /* Center the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
+  line-height: 1.5; /* Improve readability */
+}
+
+.education-item {
+  margin-bottom: 15px;
+}
+
+.education-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  font-weight: bold; /* Bold for emphasis */
+  color: #333;
+  display: flex; /* Align degree and date horizontally */
+  justify-content: space-between; /* Push date to the right */
+  align-items: center; /* Vertically align text */
+}
+
+.education-card .education-date {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #777;
+  margin-left: 10px;
+}
+
+.education-card p {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.education-card .gpa {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #444;
+}
+
+.education-card hr {
+  margin: 15px 0;
+  border: none;
+  border-top: 1px solid #ccc; /* Subtle separator */
+}
+
+/* Hover Effect */
+.education-card:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+
+
+
+
+
+/* Work Experience Section Styling */
+#work-experience {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.work-experience-container {
+  display: flex;
+  justify-content: center; /* Center align the cards */
+  gap: 150px; /* Space between the two cards */
+  flex-wrap: wrap; /* Make it responsive */
+}
+
+.work-card {
+  background-color: #f9f9f9; /* Light background for the card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px; /* Padding inside the card */
+  max-width: 500px; /* Set same width for both cards */
+  width: 100%; /* Full width for responsiveness */
+  text-align: left; /* Align text to the left */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
+  line-height: 1.8; /* Improve readability */
+  flex: 1; /* Ensure consistent width for both cards */
+}
+
+.work-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.work-card p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.work-card ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding-left: 20px; /* Indent points */
+  margin: 0;
+  color: #333;
+}
+
+.work-card ul li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.work-card ul li::before {
+  content: "➤"; /* Feathered arrow symbol */
+  color: #1e90ff; /* Cool blue color */
+  font-size: 1.2rem;
+  position: absolute;
+  left: -20px; /* Align arrow to the left of the text */
+}
+
+.work-card:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+
+
+
+
+/* Publications Section Styling */
+#publications {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.publications-container {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  gap: 30px; /* Space between cards */
+  align-items: center; /* Center align cards */
+  margin-bottom: 50px; /* Space below the last research card */
+}
+
+.publication-card {
+  background-color: #fff; /* White background for the card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px; /* Padding inside the card */
+  text-align: left; /* Align text to the left */
+  max-width: 900px; /* Wider cards */
+  width: 100%; /* Full width for responsiveness */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
+}
+
+.publication-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.view-link {
+  text-align: center; /* Center align the link */
+}
+
+.publication-card a {
+  color: #1e90ff; /* Blue link color */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.publication-card a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.publication-card:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Summary Card Styling */
+.publication-summary-card {
+  background-color: #fff; /* White background for the summary card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px; /* Padding inside the card */
+  text-align: left; /* Align text to the left */
+  max-width: 1000px; /* Wider summary card */
+  margin: 0 auto; /* Center the card */
+  line-height: 1.6; /* Improve readability */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
+}
+
+.publication-summary-card:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Summary Card Points */
+.summary-point {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: justify; /* Justify text */
+}
+
+.summary-point::before {
+  content: "📖 "; /* Open book emoji */
+  font-size: 1.2rem;
+  color: #333;
+  margin-right: 5px;
+}
+
+
+
+/* Interests Section Styling */
+#interests {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.interests-container {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  gap: 30px; /* Space between cards */
+  align-items: center; /* Center align cards */
+  margin-bottom: 50px; /* Space below the last card */
+}
+
+.interest-card {
+  background-color: #f9f9f9; /* Light background for the card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px; /* Padding inside the card */
+  text-align: justify; /* Justify text for better readability */
+  max-width: 900px; /* Set maximum width */
+  width: 100%; /* Full width for responsiveness */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
+  line-height: 1.8; /* Line height for readability */
+}
+
+.interest-card:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.interest-point {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.interest-point::before {
+  content: "✅ "; /* Green tick symbol */
+  font-size: 1.2rem;
+  color: green; /* Green color for the tick */
+  margin-right: 5px;
+}
+
+
+/* Contact Me Section */
+#contact-me {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+form#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form#contact-form label {
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+}
+
+form#contact-form input,
+form#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form#contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+form#contact-form button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+form#contact-form button:hover {
+  transform: scale(1.05);
+  background-color: #218838;
+}
+
+
+
+#interests {
+  padding-bottom: 20px; /* Reduce the bottom padding of the Interests section */
+  margin-bottom: 0; /* Ensure no additional gap below this section */
+}
+
+#contact-me {
+  padding-top: 20px; /* Reduce the top padding of the Contact Me section */
+  margin-top: 0; /* Ensure no additional gap above this section */
+}
+
+
+/* Certifications Section Styling */
+#certifications {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.certifications-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* Increased space between the cards */
+  flex-wrap: wrap; /* Ensure responsiveness */
+  margin-top: 20px;
+}
+
+.certifications-card {
+  background-color: #fff; /* White background for the card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  padding: 20px; /* Padding inside the card */
+  text-align: left; /* Align text to the left */
+  max-width: 350px; /* Set maximum width */
+  flex: 1; /* Allow flexible resizing */
+  min-width: 280px; /* Minimum width for smaller screens */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
+}
+
+.certifications-card ul {
+  list-style-type: none; /* Remove default bullet points */
+  margin: 0;
+  padding: 0;
+  color: #555;
+}
+
+.certifications-card li {
+  margin-bottom: 12px; /* Space between list items */
+  font-size: 1rem; /* Adjust font size */
+  display: flex; /* Align star and text horizontally */
+  align-items: center;
+}
+
+.certifications-card .star {
+  font-size: 1.5rem; /* Set star size relative to text */
+  color: blue; /* Blue color for the star */
+  margin-right: 10px; /* Space between the star and text */
+
+}
+
+.certifications-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Space between the two cards */
+  flex-wrap: wrap; /* Ensure responsiveness */
+  margin-top: 20px;
+}
+
+.certifications-logos {
+  display: flex;
+  flex-direction: column; /* Arrange logos vertically */
+  justify-content: center;
+  align-items: center; /* Center logos horizontally */
+  gap: 15px; /* Space between logos */
+  max-width: 150px; /* Restrict width within the boundary of the cards */
+}
+
+.certifications-logos img {
+  max-width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+}
+
+
+.certifications-card:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+  box-shadow: 0 8px 16px rgba
+
+
+
+
