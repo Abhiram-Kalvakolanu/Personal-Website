@@ -131,7 +131,7 @@ html {
 
 
 .about-me-bg {
-  background-image: url('C:/Personal/Personal website/images/cover - Copy.jpg'); /* Path to your image */
+  background-image: url('cover - Copy.jpg'); /* Path to your image */
   background-size: cover; /* Ensures the image covers the full width */
   background-position: center; /* Centers the image */
   width: 100%; /* Spans full width of the screen */
@@ -252,13 +252,6 @@ header {
   margin-bottom: 0; /* Ensure no gap at the bottom of the header */
 }
 
-.template-wrapper {
-  background-image: url("C:/Personal/Personal website/images/Untitled.png");
-  background-size: cover; /* Ensures the image covers the full area */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents repetition */
-  padding: 20px; /* Adds spacing inside the template */
-}
 
 .image-row {
   display: flex; /* Align images horizontally */
