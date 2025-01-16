@@ -111,3 +111,42 @@ const navbar = document.querySelector('.navbar');
 hamburger.addEventListener('click', () => {
   navbar.classList.toggle('active');
 });
+
+
+
+// JavaScript to handle form submission
+document.getElementById("contact-form").addEventListener("submit", async function (event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  const form = event.target;
+  const data = {
+    name: form.name.value,
+    email: form["form-email"].value,
+    message: form.message.value,
+  };
+
+  // Google Apps Script Web App URL
+  const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
+
+  try {
+    // Send data to the Google Apps Script
+    const response = await fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+    if (result.result === "Success") {
+      document.getElementById("response-message").innerText = "Thank you! Your message has been sent.";
+      form.reset(); // Reset the form fields
+    } else {
+      throw new Error("Failed to send message");
+    }
+  } catch (error) {
+    document.getElementById("response-message").innerText = "Error: Could not send your message.";
+  }
+});
+
