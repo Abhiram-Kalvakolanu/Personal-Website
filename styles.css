@@ -975,6 +975,39 @@ form#contact-form button:hover {
     margin: 5px 0;
   }
 
+	
+/* Hamburger menu styles */
+.hamburger {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+/* Show hamburger on small screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    display: none; /* Hide the navbar by default */
+    flex-direction: column; /* Stack links vertically */
+  }
+
+  .navbar.active {
+    display: flex; /* Show navbar when active */
+  }
+}
+
   .about-me-container {
     flex-direction: column; /* Stack elements vertically */
     text-align: center;
