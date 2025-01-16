@@ -126,7 +126,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
   };
 
   // Google Apps Script Web App URL
-  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzunCCzVrdlM_SZ195Q_ulaxAu8a2bya2ga_WCEuywwtTWVvvftxBGe9KFSpvsODhR4/exec";
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyCgkH-hEjHmheRfYfNKI1VlpkzLC69rtpfmzFC4zq_gJywI1AQUy1IX6eQJUnHD8r6/exec";
 
   try {
     // Send data to the Google Apps Script
