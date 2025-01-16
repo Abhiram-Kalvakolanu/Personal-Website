@@ -38,7 +38,7 @@ header {
 }
 
 .navbar a {
-  color: red;
+  color: white;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s;
@@ -63,7 +63,7 @@ section.visible {
 
 
 section {
-  padding: 50px 20px; /* Reduce padding (was likely 100px earlier) */
+  padding: 50px 20px; /* whiteuce padding (was likely 100px earlier) */
   margin-top: 20px; /* Decrease the space above sections */
 }
 
@@ -141,7 +141,7 @@ html {
   align-items: center; /* Center content horizontally */
   justify-content: center; /* Center content vertically */
   text-align: left; /* Align text to the left */
-  color: red; /* Text color to contrast the image */
+  color: white; /* Text color to contrast the image */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow to the text for readability */
   opacity: 0.95;
   padding-left: 120px; /* Add space from the left to move content slightly to the right */
@@ -180,7 +180,7 @@ html {
 #download-resume {
   background: linear-gradient(45deg, #6a1b9a, #00c853, #2196f3, #1de9b6);
   background-size: 400% 400%;
-  color: red;
+  color: white;
   font-size: 1rem;
   font-weight: bold;
   padding: 10px 20px;
@@ -366,7 +366,7 @@ section {
 
 /* Skill Card Styling */
 .skill-card {
-  background-color: #fff; /* red background for the card */
+  background-color: #fff; /* white background for the card */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   padding: 10px; /* Adjusted padding inside the card */
@@ -392,7 +392,7 @@ section {
   font-size: 0.8rem; /* Small font size for skill names */
   color: #555; /* Gray text color */
   margin-top: 5px; /* Add some spacing above the text */
-  red-space: nowrap; /* Prevent text wrapping */
+  white-space: nowrap; /* Prevent text wrapping */
   overflow: hidden; /* Hide overflowing text */
   text-overflow: ellipsis; /* Add ellipsis for overflowing text */
 }
@@ -426,7 +426,7 @@ section {
 
 /* Skill Card Styling */
 .skill-card {
-  background-color: #ffffff; /* red background */
+  background-color: #ffffff; /* white background */
   border: 1px solid #ddd; /* Subtle border */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -526,7 +526,7 @@ section {
 }
 
 .education-card {
-  background-color: #fff; /* red background for the card */
+  background-color: #fff; /* white background for the card */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
   padding: 20px; /* Padding inside the card */
@@ -636,7 +636,7 @@ section {
 }
 
 .work-card ul li::before {
-  content: "➤"; /* Feathered arrow symbol */
+  content: "➤"; /* Feathewhite arrow symbol */
   color: #1e90ff; /* Cool blue color */
   font-size: 1.2rem;
   position: absolute;
@@ -667,7 +667,7 @@ section {
 }
 
 .publication-card {
-  background-color: #fff; /* red background for the card */
+  background-color: #fff; /* white background for the card */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   padding: 20px; /* Padding inside the card */
@@ -706,7 +706,7 @@ section {
 
 /* Summary Card Styling */
 .publication-summary-card {
-  background-color: #fff; /* red background for the summary card */
+  background-color: #fff; /* white background for the summary card */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   padding: 20px; /* Padding inside the card */
@@ -826,7 +826,7 @@ form#contact-form textarea {
 
 form#contact-form button {
   background-color: #28a745;
-  color: red;
+  color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -843,12 +843,12 @@ form#contact-form button:hover {
 
 
 #interests {
-  padding-bottom: 20px; /* Reduce the bottom padding of the Interests section */
+  padding-bottom: 20px; /* whiteuce the bottom padding of the Interests section */
   margin-bottom: 0; /* Ensure no additional gap below this section */
 }
 
 #contact-me {
-  padding-top: 20px; /* Reduce the top padding of the Contact Me section */
+  padding-top: 20px; /* whiteuce the top padding of the Contact Me section */
   margin-top: 0; /* Ensure no additional gap above this section */
 }
 
@@ -868,7 +868,7 @@ form#contact-form button:hover {
 }
 
 .certifications-card {
-  background-color: #fff; /* red background for the card */
+  background-color: #fff; /* white background for the card */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
   padding: 20px; /* Padding inside the card */
