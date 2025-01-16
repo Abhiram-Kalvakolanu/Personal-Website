@@ -161,4 +161,9 @@ document.getElementById("contact-form").addEventListener("submit", async functio
   }
 });
 
+// Example of what you might have for the contact form submission
+document.getElementById("sendButton").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent form submission
+    alert("Thank you! The message has been sent successfully.");
+});
 
