@@ -130,6 +130,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
   // Display a loading message
   const responseMessage = document.getElementById("response-message");
   responseMessage.style.color = "#000";
+  responseMessage.style.fontSize = "16px";
   responseMessage.innerText = "Sending your message...";
 
   try {
@@ -145,13 +146,17 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     // Parse response
     if (response.ok) {
       responseMessage.style.color = "#28a745";
-      responseMessage.innerText = "Thank you! Your message has been sent.";
+      responseMessage.style.fontSize = "18px";
+      responseMessage.style.fontWeight = "bold";
+      responseMessage.innerText = "Your message has been sent successfully!";
       form.reset(); // Clear the form fields
     } else {
       throw new Error("Failed to send the message");
     }
   } catch (error) {
     responseMessage.style.color = "#dc3545";
+    responseMessage.style.fontSize = "18px";
+    responseMessage.style.fontWeight = "bold";
     responseMessage.innerText = "Error: Could not send your message.";
   }
 });
