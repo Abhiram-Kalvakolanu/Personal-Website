@@ -114,9 +114,10 @@ hamburger.addEventListener('click', () => {
 
 
 
-// JavaScript to handle form submission
+const PIPEDREAM_WEBHOOK_URL = "https://eox5elmk0khi3vm.m.pipedream.net";
+
 document.getElementById("contact-form").addEventListener("submit", async function (event) {
-  event.preventDefault(); // Prevent the default form submission
+  event.preventDefault();
 
   const form = event.target;
   const data = {
@@ -125,12 +126,8 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     message: form.message.value,
   };
 
-  // Google Apps Script Web App URL
-  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyCgkH-hEjHmheRfYfNKI1VlpkzLC69rtpfmzFC4zq_gJywI1AQUy1IX6eQJUnHD8r6/exec";
-
   try {
-    // Send data to the Google Apps Script
-    const response = await fetch(GOOGLE_SCRIPT_URL, {
+    const response = await fetch(PIPEDREAM_WEBHOOK_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -139,9 +136,9 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     });
 
     const result = await response.json();
-    if (result.result === "Success") {
+    if (result.success) {
       document.getElementById("response-message").innerText = "Thank you! Your message has been sent.";
-      form.reset(); // Reset the form fields
+      form.reset();
     } else {
       throw new Error("Failed to send message");
     }
