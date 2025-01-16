@@ -104,3 +104,10 @@ document.addEventListener('DOMContentLoaded', () => {
         coverImage.style.transition = 'none'; // Disable transitions
     }
 });
+
+const hamburger = document.querySelector('.hamburger');
+const navbar = document.querySelector('.navbar');
+
+hamburger.addEventListener('click', () => {
+  navbar.classList.toggle('active');
+});
