@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+
 /* Body Styling */
 body {
   font-family: Arial, sans-serif;
@@ -226,6 +232,9 @@ html {
 
 .about-me-container {
   position: relative; /* Set the container as the reference for positioning */
+  width: 90%;
+  margin: 0 auto; 
+
 }
 
 .about-me-image {
@@ -485,6 +494,8 @@ section {
   align-items: center; /* Align vertically */
   gap: 15px; /* Space between bot image and input box */
   margin-top: 20px;
+  width: 90%;
+  margin: 0 auto; 
 }
 
 .chatbot-image {
@@ -597,6 +608,9 @@ section {
   justify-content: center; /* Center align the cards */
   gap: 150px; /* Space between the two cards */
   flex-wrap: wrap; /* Make it responsive */
+  width: 90%;
+  margin: 0 auto; 
+
 }
 
 .work-card {
@@ -664,6 +678,9 @@ section {
   gap: 30px; /* Space between cards */
   align-items: center; /* Center align cards */
   margin-bottom: 50px; /* Space below the last research card */
+  width: 90%;
+  margin: 0 auto; 
+
 }
 
 .publication-card {
@@ -751,6 +768,9 @@ section {
   gap: 30px; /* Space between cards */
   align-items: center; /* Center align cards */
   margin-bottom: 50px; /* Space below the last card */
+  width: 90%;
+  margin: 0 auto; 
+
 }
 
 .interest-card {
@@ -865,6 +885,9 @@ form#contact-form button:hover {
   gap: 50px; /* Increased space between the cards */
   flex-wrap: wrap; /* Ensure responsiveness */
   margin-top: 20px;
+  width: 90%;
+  margin: 0 auto; 
+
 }
 
 .certifications-card {
@@ -906,6 +929,9 @@ form#contact-form button:hover {
   gap: 30px; /* Space between the two cards */
   flex-wrap: wrap; /* Ensure responsiveness */
   margin-top: 20px;
+  width: 90%;
+  margin: 0 auto; 
+
 }
 
 .certifications-logos {
@@ -928,6 +954,73 @@ form#contact-form button:hover {
   transform: translateY(-10px); /* Lift the card on hover */
   box-shadow: 0 8px 16px rgba
 
+/* General Mobile Styles */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    padding-top: 50px; /* Adjust padding for smaller screens */
+  }
+
+  header {
+    position: static; /* Avoid fixed position for easier navigation */
+    padding: 10px;
+  }
+
+  .navbar {
+    flex-direction: column; /* Stack navigation links vertically */
+    align-items: center;
+  }
+
+  .navbar li {
+    margin: 5px 0;
+  }
+
+  .about-me-container {
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto; 
+
+  }
+
+  .about-me-image img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .image-row {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center;
+  }
+
+  .card {
+    max-width: 90%; /* Allow cards to shrink on small screens */
+    margin: 10px auto; /* Center align cards */
+  }
+
+  .skills-category {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust grid layout */
+    gap: 10px; /* Reduce spacing */
+  }
+
+  .chatbot-container {
+    flex-direction: column; /* Stack image and input box vertically */
+    gap: 10px;
+  width: 90%;
+  margin: 0 auto; 
+
+  }
+
+  .chatbot-input {
+    width: 80%; /* Adjust input width */
+  }
+
+  #download-resume {
+    padding: 8px 16px; /* Adjust button size */
+    font-size: 0.9rem; /* Reduce font size */
+  }
+}
 
 
 
