@@ -114,21 +114,27 @@ hamburger.addEventListener('click', () => {
 
 
 
-const PROXY_URL = "https://cors-anywhere.herokuapp.com/";
 const PIPEDREAM_WEBHOOK_URL = "https://eox5elmk0khi3vm.m.pipedream.net";
 
 document.getElementById("contact-form").addEventListener("submit", async function (event) {
   event.preventDefault();
 
+  // Collect form data
   const form = event.target;
   const data = {
     name: form.name.value,
-    email: form["form-email"].value,
+    email: form.email.value,
     message: form.message.value,
   };
 
+  // Display a loading message
+  const responseMessage = document.getElementById("response-message");
+  responseMessage.style.color = "#000";
+  responseMessage.innerText = "Sending your message...";
+
   try {
-    const response = await fetch(PROXY_URL + PIPEDREAM_WEBHOOK_URL, {
+    // Send data to Pipedream Webhook
+    const response = await fetch(PIPEDREAM_WEBHOOK_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -136,15 +142,18 @@ document.getElementById("contact-form").addEventListener("submit", async functio
       body: JSON.stringify(data),
     });
 
-    const result = await response.json();
-    if (result.success) {
-      document.getElementById("response-message").innerText = "Thank you! Your message has been sent.";
-      form.reset();
+    // Parse response
+    if (response.ok) {
+      responseMessage.style.color = "#28a745";
+      responseMessage.innerText = "Thank you! Your message has been sent.";
+      form.reset(); // Clear the form fields
     } else {
-      throw new Error("Failed to send message");
+      throw new Error("Failed to send the message");
     }
   } catch (error) {
-    document.getElementById("response-message").innerText = "Error: Could not send your message.";
+    responseMessage.style.color = "#dc3545";
+    responseMessage.innerText = "Error: Could not send your message.";
   }
 });
+
 
