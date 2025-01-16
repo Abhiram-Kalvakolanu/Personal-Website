@@ -131,7 +131,7 @@ html {
 
 
 .about-me-bg {
-  background-image: url('cover - Copy.jpg'); /* Path to your image */
+  background-image: url('assets/cover - Copy.jpg'); /* Path to your image */
   background-size: cover; /* Ensures the image covers the full width */
   background-position: center; /* Centers the image */
   width: 100%; /* Spans full width of the screen */
