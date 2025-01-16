@@ -114,6 +114,7 @@ hamburger.addEventListener('click', () => {
 
 
 
+const PROXY_URL = "https://cors-anywhere.herokuapp.com/";
 const PIPEDREAM_WEBHOOK_URL = "https://eox5elmk0khi3vm.m.pipedream.net";
 
 document.getElementById("contact-form").addEventListener("submit", async function (event) {
@@ -127,7 +128,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
   };
 
   try {
-    const response = await fetch(PIPEDREAM_WEBHOOK_URL, {
+    const response = await fetch(PROXY_URL + PIPEDREAM_WEBHOOK_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
