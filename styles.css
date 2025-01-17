@@ -503,20 +503,44 @@ section {
   height: auto; /* Maintain aspect ratio */
 }
 
+.chatbot-input-container {
+  display: flex;
+  align-items: center;
+  width: 60%; /* Combined width for input and button */
+  max-width: 600px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
 .chatbot-input {
-  width: 60%; /* Make the text box wide */
-  max-width: 600px; /* Limit the maximum width */
-  padding: 15px; /* Add spacing inside the text box */
-  border-radius: 20px; /* Rounded corners */
-  border: 1px solid #ccc; /* Light gray border */
-  font-size: 1rem; /* Adjust font size */
-  outline: none; /* Remove default outline */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  flex: 1; /* Take up remaining space */
+  padding: 15px;
+  border: none; /* Remove internal border */
+  font-size: 1rem;
+  outline: none;
 }
 
 .chatbot-input:focus {
-  border-color: #2196f3; /* Highlight border color on focus */
-  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.2); /* Slight glow effect */
+  border: none; /* Maintain the design */
+  outline: none;
+}
+
+.send-icon {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: url("C:/Personal/Personal website/images/iconfinder-send-4341325_120524.png") no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+  outline: none;
+  opacity: 0.5; /* Initially disabled */
+}
+
+.send-icon:enabled {
+  opacity: 1; /* Fully visible when enabled */
+  cursor: pointer;
 }
 
 
