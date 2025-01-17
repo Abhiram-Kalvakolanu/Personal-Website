@@ -83,13 +83,20 @@
 <section id="chatbot">
     <div class="chatbot-container">
         <!-- Bot Image -->
-	<img src="assets/vecteezy_robot-chatbot-aesthetic_25271424.png" alt="Chatbot" class="chatbot-image">
-        <!-- Text Field -->
-        <input
-            type="text"
-            class="chatbot-input"
-            placeholder="Ask me anything about Abhiram 😊!"
-        />
+        <img src="assets/vecteezy_robot-chatbot-aesthetic_25271424.png" alt="Chatbot" class="chatbot-image">
+        <!-- Text Field and Send Icon -->
+        <div class="chatbot-input-container">
+            <input
+                type="text"
+                class="chatbot-input"
+                placeholder="Ask me anything about Abhiram 😊!"
+                id="chatbotMessage"
+                oninput="toggleSendIcon()"
+            />
+            <button class="send-button" id="sendButton" disabled onclick="sendMessage()">
+                <img src="assets/send-icon.png" alt="Send" class="send-icon">
+            </button>
+        </div>
     </div>
 </section>
 
