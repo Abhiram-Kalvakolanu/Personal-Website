@@ -4,7 +4,7 @@ const roles = [
   "Machine Learning Engineer",
   "Generative AI Engineer",
   "Python Developer",
-  "Data Analyst"
+  "Data Analyst",
   "AI Engineeer"
 ];
 
