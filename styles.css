@@ -488,35 +488,35 @@ section {
 }
 
 
-.chatbot-container {
+.chatbot-input-container {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Align vertically */
-  gap: 15px; /* Space between bot image and input box */
-  margin-top: 20px;
-  width: 90%;
-  margin: 0 auto; 
-}
-
-.chatbot-image {
-  width: 50px; /* Set image width */
-  height: auto; /* Maintain aspect ratio */
+  align-items: center;
+  width: 100%;
 }
 
 .chatbot-input {
-  width: 60%; /* Make the text box wide */
-  max-width: 600px; /* Limit the maximum width */
-  padding: 15px; /* Add spacing inside the text box */
-  border-radius: 20px; /* Rounded corners */
-  border: 1px solid #ccc; /* Light gray border */
-  font-size: 1rem; /* Adjust font size */
-  outline: none; /* Remove default outline */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  flex: 1; /* Allow the input box to take available space */
 }
 
-.chatbot-input:focus {
-  border-color: #2196f3; /* Highlight border color on focus */
-  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.2); /* Slight glow effect */
+.send-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.send-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.send-icon {
+  width: 25px;
+  height: 25px;
 }
 
 
