@@ -494,6 +494,8 @@ section {
   align-items: center; /* Align vertically */
   gap: 15px; /* Space between bot image and input box */
   margin-top: 20px;
+  width: 90%;
+  margin: 0 auto; 
 }
 
 .chatbot-image {
