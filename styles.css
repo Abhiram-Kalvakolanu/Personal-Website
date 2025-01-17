@@ -488,35 +488,64 @@ section {
 }
 
 
+.chatbot-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Align vertically */
+  gap: 15px; /* Space between bot image and input box */
+  margin-top: 20px;
+  width: 90%; /* Ensure container takes full width */
+  margin: 0 auto; /* Center container on the page */
+}
+
+.chatbot-image {
+  width: 50px; /* Set image width */
+  height: auto; /* Maintain aspect ratio */
+}
+
 .chatbot-input-container {
   display: flex;
   align-items: center;
   width: 100%;
+  max-width: 600px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 20px; /* Rounded corners for the whole container */
+  overflow: hidden; /* Prevent elements from overflowing */
 }
 
 .chatbot-input {
   flex: 1; /* Allow the input box to take available space */
+  padding: 15px; /* Add spacing inside the text box */
+  border: none; /* Remove individual border */
+  font-size: 1rem; /* Adjust font size */
+  outline: none; /* Remove default outline */
+}
+
+.chatbot-input:focus {
+  border-color: transparent; /* No border on focus */
+  box-shadow: none; /* Remove focus shadow from the container */
 }
 
 .send-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  margin-left: 10px;
+  background-color: #2196f3; /* Button color */
+  border: none; /* Remove default border */
+  padding: 0 15px; /* Add horizontal padding */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  cursor: pointer;
 }
 
 .send-button:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
+  background-color: #ccc; /* Gray out disabled button */
+  cursor: not-allowed; /* Show not-allowed cursor */
 }
 
 .send-icon {
-  width: 25px;
-  height: 25px;
+  width: 20px; /* Set icon width */
+  height: 20px; /* Set icon height */
+  filter: brightness(0) invert(1); /* Make icon white */
 }
 
 
