@@ -147,3 +147,26 @@ document.getElementById("contact-form").addEventListener("submit", async functio
 });
 
 
+
+function toggleSendIcon() {
+  const inputField = document.getElementById("chatbotMessage");
+  const sendButton = document.getElementById("sendButton");
+
+  if (inputField.value.trim() !== "") {
+    sendButton.disabled = false;
+  } else {
+    sendButton.disabled = true;
+  }
+}
+
+function sendMessage() {
+  const inputField = document.getElementById("chatbotMessage");
+  const message = inputField.value.trim();
+
+  if (message) {
+    console.log("Message sent:", message); // Replace with your send logic
+    inputField.value = ""; // Clear the input box
+    toggleSendIcon(); // Disable send button after sending
+  }
+}
+
