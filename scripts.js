@@ -1,10 +1,11 @@
 // List of roles to display
 const roles = [
   "Data Scientist",
-  "Gen AI Engineer",
-  "Data Engineer",
-  "Data Analyst",
-  "ML Engineer"
+  "Machine Learning Engineer",
+  "Generative AI Engineer",
+  "Python Developer",
+  "Data Analyst"
+  "AI Engineeer"
 ];
 
 let roleIndex = 0; // Start with the first role
