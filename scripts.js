@@ -115,6 +115,37 @@ hamburger.addEventListener('click', () => {
 
 
 
+const PIPEDREAM_WEBHOOK_URL = "https://eox5elmk0khi3vm.m.pipedream.net";
+
+document.getElementById("contact-form").addEventListener("submit", async function (event) {
+  event.preventDefault();
+
+  // Collect form data
+  const form = event.target;
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    message: form.message.value,
+  };
+
+  try {
+    // Send data to the webhook or process it (if required)
+    await fetch(PIPEDREAM_WEBHOOK_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    // Show a simple alert with the updated message
+    alert("Thank you! The message has been sent successfully.");
+    form.reset(); // Clear the form fields
+  } catch (error) {
+    alert("Error: Could not send your message. Please try again later.");
+  }
+});
+
 
 // Enable and handle the send button
 const inputField = document.querySelector('.chatbot-input');
@@ -134,49 +165,3 @@ sendButton.addEventListener('click', () => {
     sendButton.disabled = true; // Disable the button again
   }
 });
-
-
-
-const PIPEDREAM_WEBHOOK_URL = "https://eox5elmk0khi3vm.m.pipedream.net";
-
-document.getElementById("contact-form").addEventListener("submit", async function (event) {
-  event.preventDefault();
-
-  // Collect form data
-  const form = event.target;
-  const data = {
-    name: form.name.value,
-    email: form.email.value,
-    message: form.message.value,
-  };
-
-  // Display a loading message
-  const responseMessage = document.getElementById("response-message");
-  responseMessage.style.color = "#000";
-  responseMessage.innerText = "Sending your message...";
-
-  try {
-    // Send data to Pipedream Webhook
-    const response = await fetch(PIPEDREAM_WEBHOOK_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    // Parse response
-    if (response.ok) {
-      responseMessage.style.color = "#28a745";
-      responseMessage.innerText = "Thank you! Your message has been sent.";
-      form.reset(); // Clear the form fields
-    } else {
-      throw new Error("Failed to send the message");
-    }
-  } catch (error) {
-    responseMessage.style.color = "#dc3545";
-    responseMessage.innerText = "Error: Could not send your message.";
-  }
-});
-
-
