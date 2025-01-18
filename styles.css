@@ -577,26 +577,46 @@ section h1 {
 }
 
 
-/* Center the Programming Section */
-#programming-section {
-  display: flex; /* Use flexbox for alignment */
-  flex-direction: column; /* Stack the heading and skills vertically */
-  align-items: center; /* Center-align the content horizontally */
-  text-align: center; /* Center-align the text */
-  margin: 0 auto; /* Center the section within the page */
-  padding: 20px 0; /* Add vertical spacing */
-}
-
-#programming-section h2 {
-  margin-bottom: 5px; /* Add space below the heading */
-}
-
 #programming-section .skills-category {
-  display: flex; /* Use flexbox for skills */
-  justify-content: center; /* Center-align skills */
-  gap: 70px; /* Maintain spacing between skill cards */
-  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  display: flex; /* Use flexbox to arrange skill cards */
+  justify-content: center; /* Center-align the cards */
+  gap: 50px; /* Space between the cards */
+  flex-wrap: wrap; /* Allow wrapping for multiple rows */
 }
+
+#programming-section .skill-card {
+  width: 150px; /* Set a fixed width for consistency */
+  height: 150px; /* Set a fixed height for consistency */
+  background-color: #f4f4f4; /* Light background for the cards */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex; /* Flexbox for alignment within the card */
+  justify-content: center; /* Center-align content horizontally */
+  align-items: center; /* Center-align content vertically */
+  text-align: center; /* Align text within the card */
+  font-size: 1rem; /* Adjust text size */
+  font-weight: bold; /* Make text bold */
+  color: #333; /* Dark text for readability */
+}
+
+@media (max-width: 768px) {
+  #programming-section .skills-category {
+    gap: 30px; /* Reduce gap for smaller screens */
+  }
+
+  #programming-section .skill-card {
+    width: 120px; /* Reduce card size for smaller screens */
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  #programming-section .skills-category {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 20px; /* Smaller gap for very small screens */
+  }
+}
+
 
 /* Center the Lean & Project Management Section */
 #lean-section {
