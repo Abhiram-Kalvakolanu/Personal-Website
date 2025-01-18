@@ -140,6 +140,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
 });
 
 
+
 // Enable and handle the send button
 const inputField = document.querySelector('.chatbot-input');
 const sendButton = document.getElementById('send-button');
