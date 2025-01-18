@@ -147,21 +147,3 @@ document.getElementById("contact-form").addEventListener("submit", async functio
 });
 
 
-// Enable and handle the send button
-const inputField = document.querySelector('.chatbot-input');
-const sendButton = document.getElementById('send-button');
-
-// Toggle button state based on input
-inputField.addEventListener('input', () => {
-  sendButton.disabled = !inputField.value.trim(); // Enable if input is not empty
-});
-
-// Handle send button click
-sendButton.addEventListener('click', () => {
-  const message = inputField.value.trim();
-  if (message) {
-    console.log('Message sent:', message); // Replace with your message handling logic
-    inputField.value = ''; // Clear the input field
-    sendButton.disabled = true; // Disable the button again
-  }
-});
