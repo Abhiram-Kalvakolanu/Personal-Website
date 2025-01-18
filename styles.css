@@ -594,7 +594,7 @@ section h1 {
 #programming-section .skills-category {
   display: flex; /* Use flexbox for skills */
   justify-content: center; /* Center-align skills */
-  gap: 50px; /* Maintain spacing between skill cards */
+  gap: 70px; /* Maintain spacing between skill cards */
   flex-wrap: wrap; /* Allow wrapping for responsiveness */
 }
 
