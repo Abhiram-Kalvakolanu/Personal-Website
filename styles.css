@@ -577,26 +577,6 @@ section h1 {
 }
 
 
-/* Center the Programming Section */
-#programming-section {
-  display: flex; /* Use flexbox for alignment */
-  flex-direction: column; /* Stack the heading and skills vertically */
-  align-items: center; /* Center-align the content horizontally */
-  text-align: center; /* Center-align the text */
-  margin: 0 auto; /* Center the section within the page */
-  padding: 20px 0; /* Add vertical spacing */
-}
-
-#programming-section h2 {
-  margin-bottom: 5px; /* Add space below the heading */
-}
-
-#programming-section .skills-category {
-  display: flex; /* Use flexbox for skills */
-  justify-content: center; /* Center-align skills */
-  gap: 70px; /* Maintain spacing between skill cards */
-  flex-wrap: wrap; /* Allow wrapping for responsiveness */
-}
 
 
 /* Center the Lean & Project Management Section */
