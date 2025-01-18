@@ -5,12 +5,6 @@
   box-sizing: border-box;
 }
 
-img, video {
-  max-width: 100%;
-  height: auto;
-}
-
-
 /* Body Styling */
 body {
   font-family: Arial, sans-serif;
@@ -22,20 +16,18 @@ body {
 header {
   background: #333;
   color: #fff;
+  font-weight: bold;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-}
-header {
-  margin: 0;
-  padding: 0;
+  height: 3.3rem; /* Increased height for better visibility */
 }
 
 .navbar {
   display: flex;
   justify-content: center;
-  padding: 0.5rem 0;
+  padding: 1rem 0; /* Adjusted padding for increased height */
   list-style: none;
 }
 
@@ -46,7 +38,7 @@ header {
 .navbar a {
   color: white;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.1rem; /* Increased font size for better visibility */
   transition: color 0.3s;
 }
 
@@ -55,23 +47,7 @@ header {
 }
 
 
-/* Section Transition Animation */
-section {
-  opacity: 0; /* Initially invisible */
-  transform: translateY(50px); /* Move down initially */
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition */
-}
 
-section.visible {
-  opacity: 1; /* Fully visible */
-  transform: translateY(0); /* Move to original position */
-}
-
-
-section {
-  padding: 50px 20px; /* whiteuce padding (was likely 100px earlier) */
-  margin-top: 20px; /* Decrease the space above sections */
-}
 
 
 #about-me {
@@ -81,16 +57,9 @@ section {
   top: -10; /* Ensure it starts right below the menu bar */
 }
 
-section h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
 
-section h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
+
+
 
 section h3 {
   text-align: center;
@@ -98,6 +67,7 @@ section h3 {
   color: #555;
   opacity: 0; /* Start with hidden role */
   transition: opacity 1s ease-in-out; /* Smooth fade transition */
+  padding-top: 30px;
 }
 
 /* Fade-in and Fade-out Keyframes */
@@ -105,17 +75,17 @@ section h3 {
   0% {
     opacity: 0;
     transform: translateY(10px);
-	color: #e74c3c;
+	color: #000000;
   }
   50% {
     opacity: 1;
     transform: translateY(0);
-	color: #2ecc71;
+	color: #000000;
   }
   100% {
     opacity: 0;
     transform: translateY(-10px);
-		color: #3498db;
+		color: #000000;
   }
 }
 
@@ -135,9 +105,15 @@ html {
   border-bottom: 2px solid #f39c12; /* Add a bottom border for emphasis */
 }
 
+/* Change font color for Abhiram Kalvakolanu */
+#about-me h2 {
+  color: Blue; /* Set the font color to black */
+  font-size: 2.5rem;
+}
+
 
 .about-me-bg {
-  background-image: url('assets/cover - Copy.jpg'); /* Path to your image */
+  background-image: url('assets/Untitled design.png'); /* Path to your image */
   background-size: cover; /* Ensures the image covers the full width */
   background-position: center; /* Centers the image */
   width: 100%; /* Spans full width of the screen */
@@ -156,6 +132,20 @@ html {
 }
 
 
+/* Global Background Image Styling */
+body {
+  background-image: url('assets/background-.png'); /* Path to your background image */
+  background-size: cover; /* Ensure the image covers the entire viewport */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-attachment: fixed; /* Keep the image fixed when scrolling */
+  background-position: center; /* Center the image */
+}
+
+/* Exclude "About Me" Section from Background */
+#about-me {
+  background: none; /* Remove the background image */
+  background-color: black; /* Optional: Set a white background */
+}
 
 
 }
@@ -183,27 +173,25 @@ html {
 }
 
 
-#download-resume {
-  background: linear-gradient(45deg, #6a1b9a, #00c853, #2196f3, #1de9b6);
-  background-size: 400% 400%;
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  animation: gradientMove 3s infinite;
-  margin-top: 20px; /* Move the button down */
+/* Button styling for "Download Resume" */
+button.download-resume {
+    background-color: #28a745; /* Solid green color */
+    color: white; /* Black text */
+    border: none; /* Remove border */
+    border-radius: 25px; /* Rounded corners */
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 50px; /* Move the button down */
+    transition: background-color 0.3s ease; /* Optional hover effect */
 }
 
-#download-resume:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+/* Hover effect for the button */
+button.download-resume:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
 }
 
 @keyframes gradientMove {
@@ -232,9 +220,6 @@ html {
 
 .about-me-container {
   position: relative; /* Set the container as the reference for positioning */
-  width: 90%;
-  margin: 0 auto; 
-
 }
 
 .about-me-image {
@@ -261,6 +246,13 @@ header {
   margin-bottom: 0; /* Ensure no gap at the bottom of the header */
 }
 
+.template-wrapper {
+  background-image: url("assets/Untitled.png");
+  background-size: cover; /* Ensures the image covers the full area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repetition */
+  padding: 20px; /* Adds spacing inside the template */
+}
 
 .image-row {
   display: flex; /* Align images horizontally */
@@ -301,33 +293,51 @@ header {
 
 
 
+/* Image Row Styling */
+.image-row {
+  display: flex; /* Keep cards in the same row */
+  justify-content: center; /* Center-align all cards */
+  gap: 20px; /* Provide space between cards */
+  padding-top: 50px; /* Add padding to push the cards further down */
+  padding-bottom: 20px; /* Optional spacing below the cards */
+  position: relative; /* Ensure it doesn’t overlap with other elements */
+}
+
+/* Card Styling */
 .card {
   background-color: #fff; /* Card background color */
   border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-  padding: 20px; /* Add padding inside the card */
-  text-align: center; /* Center the content */
-  max-width: 200px; /* Limit the card width */
-  margin: 10px; /* Add spacing between cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  padding: 20px; /* Inner spacing for content */
+  text-align: center; /* Center-align content */
+  width: 200px; /* Ensure all cards are the same width */
+  height: 250px; /* Ensure all cards are the same height */
   transition: transform 0.2s ease-in-out; /* Add hover effect */
 }
 
+/* Hover Effect */
 .card:hover {
   transform: translateY(-5px); /* Slight lift on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
 }
 
+/* Card Image */
 .card img {
-  width: 80px; /* Set image width */
+  width: 70px; /* Keep the image size consistent */
   height: auto; /* Maintain aspect ratio */
   margin-bottom: 10px; /* Add space below the image */
 }
 
+/* Card Text */
 .card p {
-  font-size: 0.9rem; /* Set font size */
-  line-height: 1.4; /* Improve readability */
+  font-size: 1rem; /* Text size */
+  line-height: 1.4; /* Text readability */
   color: #333; /* Text color */
+  font-weight: bold;
 }
+
+
+
 
 
 section {
@@ -344,20 +354,9 @@ section {
 }
 
 
-/* General Skills Section Styling */
-#skills h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #333;
-}
 
-#skills h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #444;
-}
+
+
 
 
 
@@ -375,7 +374,7 @@ section {
 
 /* Skill Card Styling */
 .skill-card {
-  background-color: #fff; /* white background for the card */
+  background-color: #fff; /* White background for the card */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   padding: 10px; /* Adjusted padding inside the card */
@@ -412,14 +411,6 @@ section {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly enhanced shadow on hover */
 }
 
-/* Section Heading Styling */
-.skills-category + h2 {
-  font-size: 1.5rem; /* Smaller font size for subsequent headings */
-  text-align: center; /* Center align */
-  margin-bottom: 15px; /* Adjust spacing */
-  color: #333; /* Consistent color */
-}
-
 
 /* Skills Section Layout */
 .skills-category {
@@ -435,7 +426,7 @@ section {
 
 /* Skill Card Styling */
 .skill-card {
-  background-color: #ffffff; /* white background */
+  background-color: #ffffff; /* White background */
   border: 1px solid #ddd; /* Subtle border */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -471,21 +462,124 @@ section {
   margin-top: 5px; /* Add spacing above the text */
 }
 
-/* Section Heading Styling */
-#skills h2 {
-  font-size: 1.8rem; /* Heading font size */
-  font-weight: 700; /* Bold heading */
-  text-align: center; /* Center-align the headings */
-  margin-bottom: 20px; /* Space below each heading */
-  color: #444; /* Consistent color for headings */
+section h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #1171ba;
 }
 
-/* Align All Sections Consistently */
-#skills h1, #skills h2 {
-  text-align: center; /* Center all headings */
-  margin: 0 auto 20px auto; /* Consistent spacing */
-  color: #333; /* Darker color for visibility */
+/* General Skills Section Styling */
+#skills h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1171ba;
 }
+
+#skills h2 {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 0px;
+  padding-bottom: 2px;
+  margin-top: 30px;
+  color: #0e8c7f;
+}
+
+/* Skills Category Layout (Fix for Equidistance) */
+.skills-category {
+  display: grid; /* Use a grid layout for all skill categories */
+  grid-template-columns: repeat(6, 1fr); /* Four equally spaced columns */
+  gap: 30px; /* Consistent space between all cards */
+  justify-content: center; /* Center-align the grid */
+  align-items: start; /* Align items vertically for consistency */
+  max-width: 80%; /* Limit the grid width */
+  margin: 0 auto; /* Center the grid on the page */
+  padding: 20px; /* Add padding around the section */
+}
+
+
+
+/* Skill Card Styling */
+.skill-card {
+  background-color: #fff; /* White background for the card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 15px; /* Add padding inside the card */
+  text-align: center; /* Center-align the content horizontally */
+  width: 150px; /* Fixed card width */
+  height: 180px; /* Fixed card height */
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack image and text vertically */
+  justify-content: center; /* Center-align content vertically */
+  align-items: center; /* Center-align content horizontally */
+}
+
+/* Skill Card Images */
+.skill-card img {
+  max-width: 60%; /* Resize images to fit within the card */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Add spacing below the image */
+}
+
+/* Skill Card Text */
+.skill-card .skill-name {
+  font-size: 1rem; /* Text size for skill names */
+  color: #555; /* Gray text color */
+  margin-top: 5px; /* Add some spacing above the text */
+}
+
+/* Hover Effects for Skill Card */
+.skill-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+
+/* Center the Programming Section */
+#programming-section {
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack the heading and skills vertically */
+  align-items: center; /* Center-align the content horizontally */
+  text-align: center; /* Center-align the text */
+  margin: 0 auto; /* Center the section within the page */
+  padding: 20px 0; /* Add vertical spacing */
+}
+
+#programming-section h2 {
+  margin-bottom: 5px; /* Add space below the heading */
+}
+
+#programming-section .skills-category {
+  display: flex; /* Use flexbox for skills */
+  justify-content: center; /* Center-align skills */
+  gap: 50px; /* Maintain spacing between skill cards */
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+/* Center the Lean & Project Management Section */
+#lean-section {
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack the heading and skills vertically */
+  align-items: center; /* Center-align the content horizontally */
+  text-align: center; /* Center-align the text */
+  margin: 0 auto; /* Center the section within the page */
+  margin-bottom: 20px;
+  padding: 10px 0; /* Add vertical spacing */
+}
+
+
+#lean-section h2 {
+  margin-bottom: 5px; /* Add space below the heading */
+}
+
+#lean-section .skills-category {
+  display: flex; /* Use flexbox for skills */
+  justify-content: center; /* Center-align skills */
+  gap: 50px; /* Maintain spacing between skill cards */
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
 
 
 .chatbot-container {
@@ -530,13 +624,12 @@ section {
 .send-icon {
   width: 50px;
   height: 50px;
+  border: none;
   background: url("assets/iconfinder-send-4341325_120524.png") no-repeat center center;
   background-size: contain;
   cursor: pointer;
   outline: none;
   opacity: 0.5; /* Initially disabled */
-  border: none;
-
 }
 
 .send-icon:enabled {
@@ -561,8 +654,15 @@ section {
   padding: 50px 20px;
 }
 
+/* Change the color of the Education heading */
+#education h1 {
+  color: #1171ba; /* Replace #000 with your desired color code */
+  font-size: 2rem;
+}
+
+
 .education-card {
-  background-color: #fff; /* white background for the card */
+  background-color:	#f9f9f9; /* White background for the card */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
   padding: 20px; /* Padding inside the card */
@@ -626,6 +726,13 @@ section {
 #work-experience {
   text-align: center;
   padding: 50px 20px;
+
+}
+
+/* Change the color of the Work experience heading */
+#work-experience h1 {
+  color: #1171ba; /* Replace #000 with your desired color code */
+  font-size: 2rem;
 }
 
 .work-experience-container {
@@ -633,9 +740,6 @@ section {
   justify-content: center; /* Center align the cards */
   gap: 150px; /* Space between the two cards */
   flex-wrap: wrap; /* Make it responsive */
-  width: 90%;
-  margin: 0 auto; 
-
 }
 
 .work-card {
@@ -675,7 +779,7 @@ section {
 }
 
 .work-card ul li::before {
-  content: "➤"; /* Feathewhite arrow symbol */
+  content: "➤"; /* Feathered arrow symbol */
   color: #1e90ff; /* Cool blue color */
   font-size: 1.2rem;
   position: absolute;
@@ -703,13 +807,10 @@ section {
   gap: 30px; /* Space between cards */
   align-items: center; /* Center align cards */
   margin-bottom: 50px; /* Space below the last research card */
-  width: 90%;
-  margin: 0 auto; 
-
 }
 
 .publication-card {
-  background-color: #fff; /* white background for the card */
+  background-color: #f9f9f9; /* White background for the card */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   padding: 20px; /* Padding inside the card */
@@ -748,14 +849,14 @@ section {
 
 /* Summary Card Styling */
 .publication-summary-card {
-  background-color: #fff; /* white background for the summary card */
+  background-color: #f9f9f9; /* White background for the summary card */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   padding: 20px; /* Padding inside the card */
   text-align: left; /* Align text to the left */
-  max-width: 1000px; /* Wider summary card */
+  max-width: 900px; /* Wider summary card */
   margin: 0 auto; /* Center the card */
-  line-height: 1.6; /* Improve readability */
+  line-height: 1.8; /* Improve readability */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
 }
 
@@ -793,9 +894,6 @@ section {
   gap: 30px; /* Space between cards */
   align-items: center; /* Center align cards */
   margin-bottom: 50px; /* Space below the last card */
-  width: 90%;
-  margin: 0 auto; 
-
 }
 
 .interest-card {
@@ -804,10 +902,10 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   padding: 20px; /* Padding inside the card */
   text-align: justify; /* Justify text for better readability */
-  max-width: 900px; /* Set maximum width */
+  max-width: 1000px; /* Set maximum width */
   width: 100%; /* Full width for responsiveness */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
-  line-height: 1.8; /* Line height for readability */
+  line-height: 2; /* Line height for readability */
 }
 
 .interest-card:hover {
@@ -816,9 +914,9 @@ section {
 }
 
 .interest-point {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #333;
-  line-height: 1.6;
+  line-height: 2;
 }
 
 .interest-point::before {
@@ -888,22 +986,13 @@ form#contact-form button:hover {
 
 
 #interests {
-  padding-bottom: 20px; /* whiteuce the bottom padding of the Interests section */
+  padding-bottom: 20px; /* Reduce the bottom padding of the Interests section */
   margin-bottom: 0; /* Ensure no additional gap below this section */
 }
 
 #contact-me {
-  padding-top: 20px; /* whiteuce the top padding of the Contact Me section */
+  padding-top: 20px; /* Reduce the top padding of the Contact Me section */
   margin-top: 0; /* Ensure no additional gap above this section */
-}
-
-
-#response-message {
-  margin-top: 15px;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  color: #28a745; /* Default success color */
 }
 
 
@@ -919,18 +1008,15 @@ form#contact-form button:hover {
   gap: 50px; /* Increased space between the cards */
   flex-wrap: wrap; /* Ensure responsiveness */
   margin-top: 20px;
-  width: 90%;
-  margin: 0 auto; 
-
 }
 
 .certifications-card {
-  background-color: #fff; /* white background for the card */
+  background-color: #f9f9f9; /* White background for the card */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
   padding: 20px; /* Padding inside the card */
   text-align: left; /* Align text to the left */
-  max-width: 350px; /* Set maximum width */
+  max-width: 400px; /* Set maximum width */
   flex: 1; /* Allow flexible resizing */
   min-width: 280px; /* Minimum width for smaller screens */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
@@ -944,8 +1030,9 @@ form#contact-form button:hover {
 }
 
 .certifications-card li {
-  margin-bottom: 12px; /* Space between list items */
-  font-size: 1rem; /* Adjust font size */
+  margin-bottom: 14px; /* Space between list items */
+  font-size: 1.1rem; /* Adjust font size */
+  font-weight: bold;
   display: flex; /* Align star and text horizontally */
   align-items: center;
 }
@@ -963,9 +1050,6 @@ form#contact-form button:hover {
   gap: 30px; /* Space between the two cards */
   flex-wrap: wrap; /* Ensure responsiveness */
   margin-top: 20px;
-  width: 90%;
-  margin: 0 auto; 
-
 }
 
 .certifications-logos {
@@ -988,106 +1072,6 @@ form#contact-form button:hover {
   transform: translateY(-10px); /* Lift the card on hover */
   box-shadow: 0 8px 16px rgba
 
-/* General Mobile Styles */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px; /* Adjust font size for smaller screens */
-    padding-top: 50px; /* Adjust padding for smaller screens */
-  }
-
-  header {
-    position: static; /* Avoid fixed position for easier navigation */
-    padding: 10px;
-  }
-
-  .navbar {
-    flex-direction: column; /* Stack navigation links vertically */
-    align-items: center;
-  }
-
-  .navbar li {
-    margin: 5px 0;
-  }
-
-	
-/* Hamburger menu styles */
-.hamburger {
-  display: none; /* Hidden by default */
-  cursor: pointer;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}
-
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background: white;
-}
-
-/* Show hamburger on small screens */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .navbar {
-    display: none; /* Hide the navbar by default */
-    flex-direction: column; /* Stack links vertically */
-  }
-
-  .navbar.active {
-    display: flex; /* Show navbar when active */
-  }
-}
-
-  .about-me-container {
-    flex-direction: column; /* Stack elements vertically */
-    text-align: center;
-    padding: 20px;
-    width: 90%;
-    margin: 0 auto; 
-
-  }
-
-  .about-me-image img {
-    max-width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  .image-row {
-    flex-direction: column; /* Stack cards vertically */
-    align-items: center;
-  }
-
-  .card {
-    max-width: 90%; /* Allow cards to shrink on small screens */
-    margin: 10px auto; /* Center align cards */
-  }
-
-  .skills-category {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust grid layout */
-    gap: 10px; /* Reduce spacing */
-  }
-
-  .chatbot-container {
-    flex-direction: column; /* Stack image and input box vertically */
-    gap: 10px;
-  width: 90%;
-  margin: 0 auto; 
-
-  }
-
-  .chatbot-input {
-    width: 80%; /* Adjust input width */
-  }
-
-  #download-resume {
-    padding: 8px 16px; /* Adjust button size */
-    font-size: 0.9rem; /* Reduce font size */
-  }
-}
 
 
 
