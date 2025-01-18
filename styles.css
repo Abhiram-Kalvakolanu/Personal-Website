@@ -68,7 +68,6 @@ section h3 {
   opacity: 0; /* Start with hidden role */
   transition: opacity 1s ease-in-out; /* Smooth fade transition */
   padding-top: 30px;
-  margin-top: 50px;
 }
 
 /* Fade-in and Fade-out Keyframes */
@@ -110,16 +109,15 @@ html {
 #about-me h2 {
   color: Blue; /* Set the font color to black */
   font-size: 2.5rem;
-  padding-top: 20px;
 }
 
 
 .about-me-bg {
-  background-image: url('assets/Untitled design.png'); /* Path to your image */
+  background-image: url('C:/Personal/Personal website/images/Untitled design.png'); /* Path to your image */
   background-size: cover; /* Ensures the image covers the full width */
   background-position: center; /* Centers the image */
   width: 100%; /* Spans full width of the screen */
-  height: 400px; /* Adjust the height as per your preference */
+  height: 300px; /* Adjust the height as per your preference */
   display: flex;
   flex-direction: column;
   align-items: center; /* Center content horizontally */
@@ -136,7 +134,7 @@ html {
 
 /* Global Background Image Styling */
 body {
-  background-image: url('assets/background-.png'); /* Path to your background image */
+  background-image: url('C:/Personal/Personal website/images/background-.png'); /* Path to your background image */
   background-size: cover; /* Ensure the image covers the entire viewport */
   background-repeat: no-repeat; /* Prevent the image from repeating */
   background-attachment: fixed; /* Keep the image fixed when scrolling */
@@ -249,7 +247,7 @@ header {
 }
 
 .template-wrapper {
-  background-image: url("assets/Untitled.png");
+  background-image: url("C:/Personal/Personal website/images/Untitled.png");
   background-size: cover; /* Ensures the image covers the full area */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents repetition */
@@ -354,6 +352,7 @@ section {
 #about-me {
   margin-bottom: 0; /* Remove bottom margin from the "About Me" section */
 }
+
 
 
 
