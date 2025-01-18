@@ -128,6 +128,8 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     message: form.message.value,
   };
 
+  console.log("Form Data:", data); // Debugging log
+
   try {
     // Send data to the webhook
     const response = await fetch(PIPEDREAM_WEBHOOK_URL, {
@@ -138,8 +140,10 @@ document.getElementById("contact-form").addEventListener("submit", async functio
       body: JSON.stringify(data),
     });
 
+    console.log("Response Status:", response.status); // Debugging log
+
     if (!response.ok) {
-      throw new Error("Network response was not ok");
+      throw new Error(`Network response was not ok: ${response.status}`);
     }
 
     // Show success message
@@ -147,10 +151,11 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     form.reset(); // Clear the form fields
   } catch (error) {
     // Handle errors
-    console.error("Error:", error);
+    console.error("Error Occurred:", error); // Debugging log
     alert("Error: Could not send your message. Please try again later.");
   }
 });
+
 
 
 
