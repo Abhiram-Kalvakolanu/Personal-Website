@@ -928,75 +928,82 @@ section {
 }
 
 
-/* Contact Me Section */
+/* Basic styling for the contact form */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
 #contact-me {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
   text-align: center;
-  padding: 50px 20px;
+  color: #333;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .contact-info p {
-  font-size: 1.2rem;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
-form#contact-form {
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  max-width: 400px;
-  margin: 0 auto;
 }
 
-form#contact-form label {
+label {
+  margin-bottom: 5px;
   font-weight: bold;
-  text-align: left;
-  width: 100%;
 }
 
-form#contact-form input,
-form#contact-form textarea {
-  width: 100%;
+input, textarea {
+  margin-bottom: 15px;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
-form#contact-form textarea {
+textarea {
   resize: vertical;
   min-height: 100px;
 }
 
-form#contact-form button {
+button {
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
   background-color: #28a745;
-  color: white;
-  padding: 10px 20px;
   border: none;
-  border-radius: 5px;
-  font-size: 1rem;
+  border-radius: 4px;
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-form#contact-form button:hover {
-  transform: scale(1.05);
+button:hover {
   background-color: #218838;
 }
 
-#contact-me {
-  padding-top: 20px; /* whiteuce the top padding of the Contact Me section */
-  margin-top: 0; /* Ensure no additional gap above this section */
-}
-
-
 #response-message {
-  margin-top: 15px;
-  font-size: 16px;
-  font-weight: bold;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #28a745;
   text-align: center;
-  color: #28a745; /* Default success color */
 }
+
 
 
 
