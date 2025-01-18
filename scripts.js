@@ -138,7 +138,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     alert("Error: Could not send your message. Please try again later.");
   }
 });
-document.getElementById("response-message").innerText = "Message sent successfully!";
+
 
 // Enable and handle the send button
 const inputField = document.querySelector('.chatbot-input');
