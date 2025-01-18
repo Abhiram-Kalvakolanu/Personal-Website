@@ -173,26 +173,66 @@ body {
 }
 
 
-/* Button styling for "Download Resume" */
+
+.resume-section {
+  display: flex;
+  align-items: center; /* Align everything vertically */
+  justify-content: center; /* Center the button in the section */
+  gap: 30px; /* Space between icons and button */
+  margin-top: 20px; /* Space from the top */
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px; /* Space between LinkedIn and GitHub icons */
+  position: relative; /* Allow fine control of placement */
+  margin-right: 0; /* Remove unnecessary centering */
+}
+
+.linkedin-icon {
+  width: 90px; /* LinkedIn icon size */
+  height: auto;
+  position: relative;
+  left: -300px; /* Adjust to move LinkedIn icon left */
+  top: -15px;
+  transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.linkedin-icon:hover {
+  transform: scale(1.1); /* Slight zoom */
+}
+
+.github-icon {
+  width: 50px; /* GitHub icon size */
+  height: auto;
+  position: relative;
+  left: -250px; /* Adjust to move GitHub icon left */
+  transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.github-icon:hover {
+  transform: scale(1.1); /* Slight zoom */
+}
+
 button.download-resume {
-    background-color: #28a745; /* Solid green color */
-    color: white; /* Black text */
-    border: none; /* Remove border */
-    border-radius: 25px; /* Rounded corners */
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 50px; /* Move the button down */
-    transition: background-color 0.3s ease; /* Optional hover effect */
+  background-color: #28a745; /* Green button */
+  color: white; /* White text */
+  border: none;
+  border-radius: 25px; /* Rounded corners */
+  padding: 10px 20px;
+  font-size: 14px;
+    position: relative;
+  left: -100px; /* Adjust to move download resume icon left */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add hover effect */
+  text-align: center;
 }
 
-/* Hover effect for the button */
 button.download-resume:hover {
-    background-color: #218838; /* Darker green on hover */
+  background-color: #218838; /* Darker green on hover */
 }
 
-}
 
 @keyframes gradientMove {
   0% {
