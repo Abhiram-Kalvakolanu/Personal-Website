@@ -113,7 +113,7 @@ html {
 
 
 .about-me-bg {
-  background-image: url('C:/Personal/Personal website/images/Untitled design.png'); /* Path to your image */
+  background-image: url('assets/Untitled design.png'); /* Path to your image */
   background-size: cover; /* Ensures the image covers the full width */
   background-position: center; /* Centers the image */
   width: 100%; /* Spans full width of the screen */
@@ -134,7 +134,7 @@ html {
 
 /* Global Background Image Styling */
 body {
-  background-image: url('C:/Personal/Personal website/images/background-.png'); /* Path to your background image */
+  background-image: url('assets/background-.png'); /* Path to your background image */
   background-size: cover; /* Ensure the image covers the entire viewport */
   background-repeat: no-repeat; /* Prevent the image from repeating */
   background-attachment: fixed; /* Keep the image fixed when scrolling */
