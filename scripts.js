@@ -131,7 +131,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
       body: JSON.stringify(data),
     });
 
-	document.getElementById("response-message").innerText = "Message sent successfully!";
+	document.getElementById("response-message").innerText = "Message sent successfully! Thank you for your time :)";
 
     form.reset(); // Clear the form fields
   } catch (error) {
