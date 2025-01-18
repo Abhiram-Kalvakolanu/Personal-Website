@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
+  <title>Abhiram Kalvakolanu</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,13 +22,6 @@
         <li><a href="#contact-me">Contact Me</a></li>
       </ul>
     </nav>
-
-<div class="hamburger">
-  <div></div>
-  <div></div>
-  <div></div>
-</div>
-
   </header>
 
 
@@ -39,13 +32,11 @@
             <h2>Abhiram Kalvakolanu</h2>
             <h3 id="role-display"></h3>
             <a href="https://drive.google.com/uc?export=download&id=1MVDUeOpDSZM0Ux5A4J6gu5Ou7OELJogm" download>
-                <button id="download-resume">Download Resume</button>
+                <button class="download-resume">DOWNLOAD RESUME</button>
+
             </a>
         </div>
-        <!-- Add the new image here -->
-        <div class="about-me-image">
-            <img src="assets/man sitting.png" alt="Man Sending Email">
-        </div>
+
     </div>
 </section>
 
@@ -53,7 +44,7 @@
   
 
   
-  <div class="image-row">
+<div class="image-row">
   <div class="card">
     <img src="assets/publications.png" alt="Publications">
     <p>Published three research articles on Artificial Neural Networks</p>
@@ -76,7 +67,7 @@
   </div>
 </div>
 
-</div>
+
 
 
 
@@ -95,6 +86,7 @@
         </div>
     </div>
 </section>
+
 
 	
 
@@ -160,7 +152,8 @@
 
   </div>
 
-  <!-- Programming Section -->
+<!-- Programming Section -->
+<section id="programming-section">
   <h2>Programming</h2>
   <div class="skills-category">
     <div class="skill-card">
@@ -180,6 +173,8 @@
       <p class="skill-name">C Programming</p>
     </div>
   </div>
+</section>
+
 
 
   
@@ -238,32 +233,32 @@
 
 
 <!-- Lean & Project Management Section -->
-<h2>Lean & Project Management</h2>
-<div class="skills-category">
-  <div class="skill-card">
-    <img src="assets/agile.png" alt="Agile">
-    <p class="skill-name">Agile</p>
+<section id="lean-section">
+  <h2>Lean & Project Management</h2>
+  <div class="skills-category">
+    <div class="skill-card">
+      <img src="assets/agile.png" alt="Agile">
+      <p class="skill-name">Agile</p>
+    </div>
+    <div class="skill-card">
+      <img src="assets/kanban_9320682.png" alt="Kanban">
+      <p class="skill-name">Kanban</p>
+    </div>
+    <div class="skill-card">
+      <img src="assets/scrum.png" alt="Scrum">
+      <p class="skill-name">Scrum</p>
+    </div>
+    <div class="skill-card">
+      <img src="assets/six-sigma.png" alt="Six Sigma">
+      <p class="skill-name">Six Sigma</p>
+    </div>
+    <div class="skill-card">
+      <img src="assets/jira.png" alt="Jira">
+      <p class="skill-name">Jira</p>
+    </div>
   </div>
-  <div class="skill-card">
-    <img src="assets/kanban_9320682.png" alt="Kanban">
-    <p class="skill-name">Kanban</p>
-  </div>
-  <div class="skill-card">
-    <img src="assets/scrum.png" alt="Scrum">
-    <p class="skill-name">Scrum</p>
-  </div>
-  <div class="skill-card">
-    <img src="assets/six-sigma.png" alt="Six Sigma">
-    <p class="skill-name">Six Sigma</p>
-  </div>
-  <div class="skill-card">
-    <img src="assets/jira.png" alt="Jira">
-    <p class="skill-name">Jira</p>
-  </div>
-</div>
-
-
 </section>
+
 
 
 
@@ -464,22 +459,13 @@
     </nav>
   </header>
 
-
-	
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Me</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
   <section id="contact-me">
     <h1>Contact Me</h1>
     <div class="contact-info">
-      <p><strong>Mobile:</strong> (+1) 5145781390</p>
-      <p><strong>Email:</strong> sdsabhiram.k@gmail.com</p>
+      <p><strong>First Name:</strong> <span id="First Name">Saisri Durga Shanmukha Abhiram</span></p>
+      <p><strong>Last Name:</strong> <span id="Last Name">Kalvakolanu</span></p>
+      <p><strong>Mobile:</strong> <span id="mobile">(+1) 5145781390</span></p>
+      <p><strong>Email:</strong> <span id="email">sdsabhiram.k@gmail.com</span></p>
     </div>
 
     <form id="contact-form">
@@ -487,27 +473,15 @@
       <input type="text" id="name" name="name" placeholder="Your Name" required>
 
       <label for="email">Email ID:</label>
-      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <input type="email" id="form-email" name="email" placeholder="Your Email" required>
 
       <label for="message">Message:</label>
       <textarea id="message" name="message" placeholder="Your Message" required></textarea>
 
-      <button type="submit">Send</button>
+      <button type="submit" id="send-button">Send</button>
     </form>
-
-    <p id="response-message"></p>
   </section>
 
   <script src="scripts.js"></script>
 </body>
 </html>
-
-
-
-  <script src="scripts.js"></script>
-</body>
-</html>
-
-
-
-
