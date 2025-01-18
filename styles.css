@@ -663,10 +663,10 @@ section h1 {
 }
 
 .send-icon {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border: none;
-  background: url("C:/Personal/Personal website/images/iconfinder-send-4341325_120524.png") no-repeat center center;
+  background: url("assets/images/iconfinder-send-4341325_120524.png") no-repeat center center;
   background-size: contain;
   background-color: white;
   cursor: pointer;
