@@ -626,43 +626,39 @@ section h1 {
 .chatbot-container {
   display: flex;
   justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  gap: 15px; /* Space between the bot image and input box */
-  margin: 30px auto; /* Center the container and add space from surrounding elements */
-  width: 90%; /* Limit the container width */
-  max-width: 800px; /* Restrict the maximum width for better control */
-  background: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background */
-  border-radius: 15px; /* Round corners for better aesthetics */
-  padding: 20px; /* Add padding inside the container */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  align-items: center; /* Align vertically */
+  gap: 15px; /* Space between bot image and input box */
+  margin-top: 20px;
+  width: 90%;
+  margin: 0 auto; 
 }
 
 .chatbot-image {
-  width: 50px; /* Adjust the bot image size */
+  width: 50px; /* Set image width */
   height: auto; /* Maintain aspect ratio */
 }
 
 .chatbot-input-container {
   display: flex;
   align-items: center;
-  flex: 1; /* Allow the input to take up remaining space */
-  border: 1px solid #ccc;
+  width: 60%; /* Combined width for input and button */
+  max-width: 600px;
   border-radius: 50px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  background: white; /* Ensure input has a solid background */
 }
 
 .chatbot-input {
-  flex: 1; /* Take up the available space */
+  flex: 1; /* Take up remaining space */
   padding: 15px;
-  border: none; /* Remove border */
+  border: none; /* Remove internal border */
   font-size: 1rem;
   outline: none;
 }
 
 .chatbot-input:focus {
-  border: none;
+  border: none; /* Maintain the design */
   outline: none;
 }
 
@@ -679,10 +675,9 @@ section h1 {
 }
 
 .send-icon:enabled {
-  opacity: 1;
+  opacity: 1; /* Fully visible when enabled */
   cursor: pointer;
 }
-
 
 
 
@@ -692,7 +687,6 @@ section {
   border: none; /* Remove any borders */
   background: transparent; /* Ensure no individual background color/image */
 }
-
 
 
 /* Education Section Styling */
