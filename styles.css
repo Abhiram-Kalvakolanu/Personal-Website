@@ -984,6 +984,19 @@ form#contact-form button:hover {
   background-color: #218838;
 }
 
+#contact-me {
+  padding-top: 20px; /* whiteuce the top padding of the Contact Me section */
+  margin-top: 0; /* Ensure no additional gap above this section */
+}
+
+
+#response-message {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #28a745; /* Default success color */
+}
 
 
 
