@@ -68,6 +68,7 @@ section h3 {
   opacity: 0; /* Start with hidden role */
   transition: opacity 1s ease-in-out; /* Smooth fade transition */
   padding-top: 30px;
+  margin-top: 50px;
 }
 
 /* Fade-in and Fade-out Keyframes */
