@@ -128,9 +128,14 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     message: form.message.value,
   };
 
+  // Display a loading message
+  const responseMessage = document.getElementById("response-message");
+  responseMessage.style.color = "#000";
+  responseMessage.innerText = "Sending your message...";
+
   try {
-    // Send data to the webhook or process it (if required)
-    await fetch(PIPEDREAM_WEBHOOK_URL, {
+    // Send data to Pipedream Webhook
+    const response = await fetch(PIPEDREAM_WEBHOOK_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -138,13 +143,20 @@ document.getElementById("contact-form").addEventListener("submit", async functio
       body: JSON.stringify(data),
     });
 
-    // Show a simple alert with the updated message
-    alert("Thank you! The message has been sent successfully.");
-    form.reset(); // Clear the form fields
+    // Parse response
+    if (response.ok) {
+      responseMessage.style.color = "#28a745";
+      responseMessage.innerText = "Thank you! Your message has been sent.";
+      form.reset(); // Clear the form fields
+    } else {
+      throw new Error("Failed to send the message");
+    }
   } catch (error) {
-    alert("Error: Could not send your message. Please try again later.");
+    responseMessage.style.color = "#dc3545";
+    responseMessage.innerText = "Error: Could not send your message.";
   }
 });
+
 
 
 
