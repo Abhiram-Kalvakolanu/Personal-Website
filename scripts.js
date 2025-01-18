@@ -131,8 +131,8 @@ document.getElementById("contact-form").addEventListener("submit", async functio
       body: JSON.stringify(data),
     });
 
-    // Show a simple alert with the updated message
-    alert("Thank you! The message has been sent successfully.");
+	document.getElementById("response-message").innerText = "Message sent successfully!";
+
     form.reset(); // Clear the form fields
   } catch (error) {
     alert("Error: Could not send your message. Please try again later.");
