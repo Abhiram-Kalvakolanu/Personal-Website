@@ -495,12 +495,13 @@ section {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
     overflow: hidden; /* Prevent content overflow */
     background: white; /* Background color for input box */
+    height: 40px;
 }
 
 /* Chatbot Input Field */
 .chatbot-input {
     flex: 1; /* Take up remaining space */
-    padding: 20px 15px; /* Add padding */
+    padding: 10px 15px; /* Add padding */
     border: none; /* Remove borders */
     font-size: 1rem; /* Font size */
     outline: none; /* Remove focus outline */
@@ -511,7 +512,7 @@ section {
     width: 40px; /* Button size matches the height of the input */
     height: 40px;
     border: none; /* No border */
-    background: url("assets/images/iconfinder-send-4341325_120524.png") no-repeat center center; /* Add send icon */
+    background: url("assets/iconfinder-send-4341325_120524.png") no-repeat center center; /* Add send icon */
     background-size: contain; /* Ensure the icon fits inside the button */
     background-color: transparent; /* Transparent background */
     cursor: pointer; /* Pointer cursor */
