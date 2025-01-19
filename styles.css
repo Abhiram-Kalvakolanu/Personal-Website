@@ -501,11 +501,14 @@ section {
 /* Chatbot Input Field */
 .chatbot-input {
     flex: 1; /* Take up remaining space */
-    padding: 10px 15px; /* Add padding */
+    padding: 0 15px; /* Adjust padding to only left and right */
     border: none; /* Remove borders */
     font-size: 1rem; /* Font size */
     outline: none; /* Remove focus outline */
     text-align: center;
+    height: 50px; /* Matches the height of the input container */
+    line-height: 50px; /* Matches the height to center text vertically */
+    box-sizing: border-box; /* Include padding and border in height calculation */
 }
 
 /* Send Button Styling */
