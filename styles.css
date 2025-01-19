@@ -481,33 +481,7 @@ section h1 {
 
 
 
-
-
-/* Center the Lean & Project Management Section */
-#lean-section {
-  display: flex; /* Use flexbox for alignment */
-  flex-direction: column; /* Stack the heading and skills vertically */
-  align-items: center; /* Center-align the content horizontally */
-  text-align: center; /* Center-align the text */
-  margin: 0 auto; /* Center the section within the page */
-  margin-bottom: 20px;
-  padding: 10px 0; /* Add vertical spacing */
-}
-
-
-#lean-section h2 {
-  margin-bottom: 5px; /* Add space below the heading */
-}
-
-#lean-section .skills-category {
-  display: flex; /* Use flexbox for skills */
-  justify-content: center; /* Center-align skills */
-  gap: 50px; /* Maintain spacing between skill cards */
-  flex-wrap: wrap; /* Allow wrapping for responsiveness */
-}
-
-
-
+/* Chatbot styles */
 .chatbot-container {
   display: flex;
   justify-content: center; /* Center horizontally */
