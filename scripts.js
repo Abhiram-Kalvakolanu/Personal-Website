@@ -159,3 +159,4 @@ sendButton.addEventListener('click', () => {
     sendButton.disabled = true; // Disable the button again
   }
 });
+
