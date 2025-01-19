@@ -501,7 +501,7 @@ section {
 /* Chatbot Input Field */
 .chatbot-input {
     flex: 1; /* Take up remaining space */
-    padding: 10px 15px; /* Add padding */
+    padding: 10px 15px 5px; /* Add padding */
     border: none; /* Remove borders */
     font-size: 1rem; /* Font size */
     outline: none; /* Remove focus outline */
