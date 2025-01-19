@@ -118,7 +118,7 @@ html {
   background-size: cover; /* Ensures the image covers the full width */
   background-position: center; /* Centers the image */
   width: 100%; /* Spans full width of the screen */
-  height: 500px; /* Adjust the height as per your preference */
+  height: 350px; /* Adjust the height as per your preference */
   display: flex;
   flex-direction: column;
   align-items: center; /* Center content horizontally */
