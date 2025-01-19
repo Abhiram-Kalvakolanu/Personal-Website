@@ -509,8 +509,8 @@ section {
 }
 
 .send-icon {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border: none;
   background: url("assets/images/iconfinder-send-4341325_120524.png") no-repeat center center;
   background-size: contain;
@@ -524,6 +524,9 @@ section {
   opacity: 1; /* Fully visible when enabled */
   cursor: pointer;
 }
+
+
+
 
 
 
