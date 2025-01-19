@@ -517,14 +517,17 @@ section {
     background-size: contain; /* Ensure the icon fits inside the button */
     background-color: transparent; /* Transparent background */
     cursor: pointer; /* Pointer cursor */
-    margin-right: 2px; /* Add some spacing on the right */
     outline: none; /* Remove outline */
 }
 
-/* Remove hover background */
-.send-icon:hover {
-    background-color: transparent !important; /* Ensure no background color on hover */
-    box-shadow: none; /* Remove any hover effects like shadows */
+/* Remove unwanted hover effects */
+.send-icon:hover,
+.send-icon:focus,
+.send-icon:active {
+    background-color: transparent !important; /* No background change */
+    box-shadow: none !important; /* No shadows */
+    outline: none !important; /* No outline */
+    transform: none !important; /* No animations */
 }
 
 
