@@ -395,57 +395,6 @@ section {
 
 
 
-
-
-
-
-
-
-/* Skills Category Layout */
-.skills-category {
-  display: grid; /* Use a grid layout */
-  grid-template-columns: repeat(6, 1fr); /* 6 items per row */
-  gap: 20px; /* Space between cards */
-  justify-content: center; /* Center the grid horizontally */
-  align-items: center; /* Center the grid vertically */
-  max-width: 80%; /* Limit the grid width */
-  margin: 0 auto; /* Center the grid */
-  padding: 20px;
-}
-
-/* Skill Card Styling */
-.skill-card {
-  background-color: #fff; /* White background for the card */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  padding: 10px; /* Adjusted padding inside the card */
-  text-align: center; /* Center the content horizontally */
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hover effect */
-  width: 120px; /* Fixed card width */
-  height: 150px; /* Fixed card height */
-  display: flex; /* Flexbox for layout */
-  flex-direction: column; /* Stack image and text vertically */
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-}
-
-/* Skill Card Images */
-.skill-card img {
-  max-width: 50%; /* Resize images to fit within the card */
-  height: auto; /* Maintain aspect ratio */
-  margin-bottom: 5px; /* Add spacing below the image */
-}
-
-/* Skill Card Text */
-.skill-card .skill-name {
-  font-size: 0.8rem; /* Small font size for skill names */
-  color: #555; /* Gray text color */
-  margin-top: 5px; /* Add some spacing above the text */
-  white-space: nowrap; /* Prevent text wrapping */
-  overflow: hidden; /* Hide overflowing text */
-  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
-}
-
 /* Hover Effects for Skill Card */
 .skill-card:hover {
   transform: translateY(-5px); /* Slight lift on hover */
@@ -527,54 +476,9 @@ section h1 {
   color: #0e8c7f;
 }
 
-/* Skills Category Layout (Fix for Equidistance) */
-.skills-category {
-  display: grid; /* Use a grid layout for all skill categories */
-  grid-template-columns: repeat(6, 1fr); /* Four equally spaced columns */
-  gap: 30px; /* Consistent space between all cards */
-  justify-content: center; /* Center-align the grid */
-  align-items: start; /* Align items vertically for consistency */
-  max-width: 80%; /* Limit the grid width */
-  margin: 0 auto; /* Center the grid on the page */
-  padding: 20px; /* Add padding around the section */
-}
 
 
 
-/* Skill Card Styling */
-.skill-card {
-  background-color: #fff; /* White background for the card */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  padding: 15px; /* Add padding inside the card */
-  text-align: center; /* Center-align the content horizontally */
-  width: 150px; /* Fixed card width */
-  height: 180px; /* Fixed card height */
-  display: flex; /* Flexbox for layout */
-  flex-direction: column; /* Stack image and text vertically */
-  justify-content: center; /* Center-align content vertically */
-  align-items: center; /* Center-align content horizontally */
-}
-
-/* Skill Card Images */
-.skill-card img {
-  max-width: 60%; /* Resize images to fit within the card */
-  height: auto; /* Maintain aspect ratio */
-  margin-bottom: 10px; /* Add spacing below the image */
-}
-
-/* Skill Card Text */
-.skill-card .skill-name {
-  font-size: 1rem; /* Text size for skill names */
-  color: #555; /* Gray text color */
-  margin-top: 5px; /* Add some spacing above the text */
-}
-
-/* Hover Effects for Skill Card */
-.skill-card:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-}
 
 
 
