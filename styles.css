@@ -501,15 +501,17 @@ section {
 /* Chatbot Input Field */
 .chatbot-input {
     flex: 1; /* Take up remaining space */
-    padding: 0 15px; /* Adjust padding to only left and right */
+    padding: 10px 15px; /* Add padding */
     border: none; /* Remove borders */
     font-size: 1rem; /* Font size */
     outline: none; /* Remove focus outline */
-    text-align: center;
+    display: flex; /* Make the input a flex container */
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Horizontally center the text */
     height: 50px; /* Matches the height of the input container */
-    line-height: 50px; /* Matches the height to center text vertically */
-    box-sizing: border-box; /* Include padding and border in height calculation */
+    box-sizing: border-box; /* Include padding in size calculation */
 }
+
 
 /* Send Button Styling */
 .send-icon {
