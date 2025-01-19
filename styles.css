@@ -395,13 +395,6 @@ section {
 
 
 
-/* Hover Effects for Skill Card */
-.skill-card:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly enhanced shadow on hover */
-}
-
-
 /* Skills Section Layout */
 .skills-category {
   display: grid; /* Use a grid layout for organization */
@@ -452,12 +445,7 @@ section {
   margin-top: 5px; /* Add spacing above the text */
 }
 
-section h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 2rem;
-  color: #1171ba;
-}
+
 
 /* General Skills Section Styling */
 #skills h1 {
@@ -475,8 +463,6 @@ section h1 {
   margin-top: 30px;
   color: #0e8c7f;
 }
-
-
 
 
 
