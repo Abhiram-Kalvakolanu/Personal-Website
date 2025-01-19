@@ -495,7 +495,7 @@ section {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
     overflow: hidden; /* Prevent content overflow */
     background: white; /* Background color for input box */
-    height: 50px;
+    height: 40px;
 }
 
 /* Chatbot Input Field */
