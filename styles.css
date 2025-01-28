@@ -736,6 +736,7 @@ section {
   transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
   width: 95%; /* Smaller width for the card */
   max-width: 400px; /* Limit the maximum width */
+  height: 400px; /* Set a fixed height for all cards */
 
 }
 
@@ -746,9 +747,10 @@ section {
 
 .project-card img {
   width: 100%; /* Full-width image */
-  height: auto; /* Fixed height for images */
-  object-fit: contain; /* Ensure images cover the area */
+  height: 280px; /* Fixed height for images */
+  object-fit: cover; /* Ensure images cover the area without distortion */
 }
+
 
 
 
