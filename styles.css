@@ -641,6 +641,13 @@ section {
   font-size: 2rem;
 }
 
+#work-experience h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 80px; /* Add space below the heading */
+  color: #1171ba;
+}
+
 .work-experience-container {
   display: flex;
   justify-content: center; /* Center align the cards */
@@ -768,6 +775,13 @@ h1 {
   padding: 50px 20px;
 }
 
+#publications h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 80px; /* Add space below the heading */
+  color: #1171ba;
+}
+
 .publications-container {
   display: flex;
   flex-direction: column; /* Stack cards vertically */
@@ -855,6 +869,13 @@ h1 {
   padding: 50px 20px;
 }
 
+#interests h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 80px; /* Add space below the heading */
+  color: #1171ba;
+}
+
 .interests-container {
   display: flex;
   flex-direction: column; /* Stack cards vertically */
@@ -910,6 +931,13 @@ body {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact-me h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 80px; /* Add space below the heading */
+  color: #1171ba;
 }
 
 h1 {
