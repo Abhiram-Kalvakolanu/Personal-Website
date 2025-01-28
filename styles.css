@@ -450,6 +450,12 @@ section {
 }
 
 
+ h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1171ba;
+}
 
 /* General Skills Section Styling */
 #skills h1 {
