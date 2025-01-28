@@ -1021,6 +1021,13 @@ button:hover {
   padding: 50px 20px;
 }
 
+#certifications h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 80px; /* Add space below the heading */
+  color: #1171ba;
+}
+
 .certifications-container {
   display: flex;
   justify-content: center;
