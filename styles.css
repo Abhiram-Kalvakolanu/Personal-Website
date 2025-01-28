@@ -692,70 +692,59 @@ section {
 }
 
 
-.project-container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
+#projects h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 80px; /* Add space below the heading */
+  color: #1171ba;
 }
 
-.project-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+  gap: 80px; /* Space between cards */
+  margin: 0 auto; /* Center horizontally */
+  max-width: 1200px; /* Limit the width of the grid */
+  justify-content: center; /* Center the grid items horizontally */
+  align-items: center; /* Align grid items vertically */
+  min-height: 100vh; /* Take up full viewport height */
+  display: flex; /* Use flexbox to align vertically and horizontally */
+  flex-wrap: wrap; /* Wrap items if they overflow */
 }
+
 
 .project-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  text-align: center;
-  width: 320px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #fff; /* White card background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  overflow: hidden; /* Prevent image overflow */
+  text-decoration: none; /* Remove underline on text */
+  color: #333; /* Text color */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+  width: 95%; /* Smaller width for the card */
+  max-width: 400px; /* Limit the maximum width */
+
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px); /* Lift the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow */
 }
 
 .project-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  width: 100%; /* Full-width image */
+  height: auto; /* Fixed height for images */
+  object-fit: contain; /* Ensure images cover the area */
 }
 
-.project-title {
-  font-size: 1.3rem;
-  margin: 10px 0;
-  color: #333;
+
+
+.project-card h2 {
+  font-size: 1.1rem;
+  margin: 15px;
+  text-align: center;
   font-weight: bold;
-}
-
-.project-title a {
-  text-decoration: none;
-  color: #333;
-}
-
-.project-title a:hover {
-  text-decoration: underline;
-  color: #007BFF;
-}
-
-.github-link {
-  text-decoration: none;
-  font-size: 1rem;
-  color: #007BFF;
-  margin-top: 10px;
-  display: inline-block;
-}
-
-.github-link:hover {
-  text-decoration: underline;
-  color: #0056b3;
+  color: #1171ba;
 }
 
 
